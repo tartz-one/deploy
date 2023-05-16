@@ -1,4 +1,4 @@
-import UniswapV3Staker from '@uniswap/v3-staker/artifacts/contracts/UniswapV3Staker.sol/UniswapV3Staker.json'
+import TartzStaker from '@uniswap/v3-staker/artifacts/contracts/TartzStaker.sol/TartzStaker.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 const ONE_MINUTE_SECONDS = 60
@@ -14,7 +14,7 @@ const MAX_INCENTIVE_DURATION = ONE_YEAR_SECONDS * 2
 
 export const DEPLOY_V3_STAKER = createDeployContractStep({
   key: 'v3StakerAddress',
-  artifact: UniswapV3Staker,
+  artifact: TartzStaker,
   computeArguments(state) {
     if (state.v3CoreFactoryAddress === undefined) {
       throw new Error('Missing V3 Core Factory')
